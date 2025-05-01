@@ -1,0 +1,5 @@
+en:
+  label_auto_private_notes_roles: "Roles for Private Notes"
+  label_auto_private_issues_roles: "Roles for Private Issues"
+  text_auto_private_notes_description: "Select roles for which private notes will be checked by default when editing an issue."
+  text_auto_private_issues_description: "Select roles for which new issues will be marked as private by default."

@@ -1,0 +1,27 @@
+<% roles = Role.sorted.all %>
+
+<fieldset class="box tabular">
+  <legend><%= l(:label_auto_private_notes_roles) %></legend>
+  <p><%= l(:text_auto_private_notes_description) %></p>
+  <div id="settings_note_role_ids">
+    <% roles.each do |role| %>
+      <label style="display: block; margin-left: 1em;">
+        <%= h role.name %>
+        <%= check_box_tag 'settings[note_role_ids][]', role.id, @settings['note_role_ids']&.include?(role.id.to_s) %>
+      </label>
+    <% end %>
+  </div>
+</fieldset>
+
+<fieldset class="box tabular" style="margin-top: 2em;">
+  <legend><%= l(:label_auto_private_issues_roles) %></legend>
+  <p><%= l(:text_auto_private_issues_description) %></p>
+  <div id="settings_issue_role_ids">
+    <% roles.each do |role| %>
+      <label style="display: block; margin-left: 1em;">
+        <%= h role.name %>
+        <%= check_box_tag 'settings[issue_role_ids][]', role.id, @settings['issue_role_ids']&.include?(role.id.to_s) %>
+      </label>
+    <% end %>
+  </div>
+</fieldset>
